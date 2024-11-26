@@ -92,12 +92,10 @@ public class QueueArrayImplementation {
         System.out.print("Enter the capacity of the queue: ");
         int capacity = scanner.nextInt();
         
-        // Initialize the queue with the user-defined capacity
         QueueArrayImplementation queue = new QueueArrayImplementation(capacity);
 
         boolean exit = false;
 
-        // User operations loop
         while (!exit) {
             System.out.println("\nChoose an operation:");
             System.out.println("1. Enqueue");
@@ -112,24 +110,24 @@ public class QueueArrayImplementation {
 
             switch (choice) {
                 case 1:
-                    // Enqueue operation
+    
                     System.out.print("Enter the element to enqueue: ");
                     int element = scanner.nextInt();
                     queue.enqueue(element);
                     break;
                 case 2:
-                    // Dequeue operation
+    
                     queue.dequeue();
                     break;
                 case 3:
-                    // Peek operation
+
                     int frontElement = queue.peek();
                     if (frontElement != -1) {
                         System.out.println("Front element: " + frontElement);
                     }
                     break;
                 case 4:
-                    // Check if queue is empty
+    
                     if (queue.isEmpty()) {
                         System.out.println("Queue is empty.");
                     } else {
@@ -137,7 +135,7 @@ public class QueueArrayImplementation {
                     }
                     break;
                 case 5:
-                    // Check if queue is full
+
                     if (queue.isFull()) {
                         System.out.println("Queue is full.");
                     } else {
@@ -145,11 +143,11 @@ public class QueueArrayImplementation {
                     }
                     break;
                 case 6:
-                    // Display the queue
+
                     queue.display();
                     break;
                 case 7:
-                    // Exit
+
                     exit = true;
                     break;
                 default:
